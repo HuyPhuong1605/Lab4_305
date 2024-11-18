@@ -10,7 +10,7 @@ package com.mycompany.cse305;
  */
 public class LongTerm implements Contract{
     
-     public int contractID;
+  public int contractID;
   public  int propertyID;
   public int tenanatID;
   public String rentAmonut;
@@ -40,14 +40,20 @@ public class LongTerm implements Contract{
     @Override
     public String BuildrentAmonut() {
        return rentAmonut;
-    }
-    
-
-    
+    }    
     @Override
     public Contract SignContract() {
         Contract out = new Permanent(this.contractID, this.propertyID, this.tenanatID, this.rentAmonut);
        return out;
     }
+
+    @Override
+    public String toString() {
+        return "LongTerm{" + "contractID=" + contractID + ", propertyID=" + propertyID + ", tenanatID=" + tenanatID + ", rentAmonut=" + rentAmonut + '}';
+    }
+
+    
+    
+    
     
 }

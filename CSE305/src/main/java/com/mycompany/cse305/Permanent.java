@@ -49,4 +49,11 @@ public class Permanent implements Contract{
         Contract out = new Permanent(this.contractID, this.propertyID, this.tenanatID, this.rentAmonut);
        return out;
     }
+
+    @Override
+    public String toString() {
+        return "Permanent{" + "contractID=" + contractID + ", propertyID=" + propertyID + ", tenanatID=" + tenanatID + ", rentAmonut=" + rentAmonut + '}';
+    }
+    
+    
 }
