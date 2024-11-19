@@ -12,9 +12,9 @@ public class HighPriorityRequest extends MaintenanceRequest {
     
     
     
-    public String priority;
-    public String status;
-    public String expireDate;
+    public String priority1;
+    public String status1;
+    public String expireDate1;
 
     public HighPriorityRequest(String priority, String status, String expireDate) {
         this.priority = priority;

@@ -11,7 +11,7 @@ package newpackage;
 public interface RequestCreator{
     
      public MaintenanceRequest createRequest();
-     public MaintenanceRequest processRequest();
+     public String processRequest();
     
     
     

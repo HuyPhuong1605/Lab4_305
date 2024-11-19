@@ -14,6 +14,12 @@ public class MediumPriotityConcreteCreator implements RequestCreator {
     public String priority1;
     public String status1;
     public String expireDate1;
+
+    public MediumPriotityConcreteCreator(String priority1, String status1, String expireDate1) {
+        this.priority1 = priority1;
+        this.status1 = status1;
+        this.expireDate1 = expireDate1;
+    }
     
     MediumPriorityRequest priotity =  new MediumPriorityRequest(priority1,status1,expireDate1);
 
@@ -26,5 +32,4 @@ public class MediumPriotityConcreteCreator implements RequestCreator {
         return priotity.processRequest();
     }
 
-   
 }

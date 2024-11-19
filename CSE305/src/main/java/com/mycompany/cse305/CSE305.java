@@ -5,13 +5,9 @@
 
 package com.mycompany.cse305;
 
-import static com.mycompany.cse305.RentalManagement.RentalManagement_Application.decrypt;
-import static com.mycompany.cse305.RentalManagement.RentalManagement_Application.encrypt;
-import static com.mycompany.cse305.RentalManagement.RentalManagement_Application.generateKey;
-import java.awt.TrayIcon;
+
+
 import java.util.Scanner;
-import javax.annotation.processing.Messager;
-import javax.crypto.SecretKey;
 
 /**
  *
@@ -35,34 +31,22 @@ public class CSE305 {
 
    String input = "";
         switch (contract) {
-            case "Permanent":{
+            case "Permanent" -> {
                 Permanent permanent = new Permanent(contractID, propertyID, tenanatID, rentAmonut);
                 input = permanent.toString();
-                break;}
-            case "LongTerm":{
+}
+            case "LongTerm" -> {
                 LongTerm longTerm = new LongTerm(contractID, propertyID, tenanatID, rentAmonut);
                 input = longTerm.toString();
-                break;}
-            case "ShortTerm":{
+}
+            case "ShortTerm" -> {
                  ShortTerm shortTerm = new ShortTerm(contractID, propertyID, tenanatID, rentAmonut);
                  input = shortTerm.toString();
-                break;
             }
-            default:
-                throw new AssertionError();
+            default -> throw new AssertionError();
         }  
         
-        
-        try {
-            SecretKey key = generateKey();
-        //    String message = "Hello my word!!!";
-            String encryptedMessage = encrypt(input, key);
-            System.out.println("Encrypted String: " + encryptedMessage);
-            String decryptedMessage = decrypt(encryptedMessage, key);
-            System.out.println("Decrypted String: " + decryptedMessage);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    
         
         
         

@@ -18,10 +18,10 @@ public abstract class MaintenanceRequest {
     public abstract String setExpire();
     public abstract String processRequest();
 
-//    public void printRequestDetails() {
-//        System.out.println("Priority: " + priority);
-//        System.out.println("Status: " + status);
-//        System.out.println("Expire Date: " + expireDate);
-//    }
+    public void printRequestDetails() {
+        System.out.println("Priority: " + priority);
+        System.out.println("Status: " + status);
+        System.out.println("Expire Date: " + expireDate);
+    }
     
 }

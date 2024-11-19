@@ -8,16 +8,19 @@ package com.mycompany.cse305;
  *
  * @author PC
  */
-public class Document {
+public abstract class Document {
     
     public String extension;
     public String encryption;
     
-//    public String SetExtension();
-//    public String SetEncryption();
-//    public Document BuilDocument();
+     public Document(String extension, String encryption) {
+        this.extension = extension;
+        this.encryption = encryption;
+    }
     
-    
-    
+    public abstract String SetExtension();
+    public abstract String SetEncryption();
+    public abstract Document BuilDocument();
+
     
 }
