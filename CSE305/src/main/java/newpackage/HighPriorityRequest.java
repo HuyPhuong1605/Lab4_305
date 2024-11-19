@@ -21,19 +21,19 @@ public class HighPriorityRequest extends MaintenanceRequest {
         this.status = status;
         this.expireDate = expireDate;
     }
-    @Override
-    public String setPriority() {
-        return priority; 
+       @Override
+    public void setPriority() {
+        this.priority = priority1; 
     }
 
     @Override
-    public String setStatus() {
-        return status;   
+    public void setStatus() {
+        this.status = status1;   
     }
 
     @Override
-    public String setExpire() {
-        return expireDate;
+    public void setExpire() {
+        this.expireDate = expireDate1;
     }
 
     @Override

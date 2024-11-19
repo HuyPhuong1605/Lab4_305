@@ -7,17 +7,19 @@ package com.mycompany.cse305;
 public class NormalDoc extends Document {
 
     @Override
-    public String SetExtension() {
-        return ".txt";
+    public void SetExtension() {
+        this.extension = ".txt";
     }
 
     @Override
-    public String SetEncryption(String exString) {
-        return exString;
+    public void SetEncryption(String exString) {
+        this.encryption = exString;
     }
 
     @Override
     public Document BuilDocument() {
         return this;
     }
+    
+    
 }

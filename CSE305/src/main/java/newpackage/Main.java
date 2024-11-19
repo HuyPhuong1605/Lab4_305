@@ -29,16 +29,20 @@ public class Main {
 
                 lowPriotityConcreteCreator low =  new lowPriotityConcreteCreator(priority,status,expireDate);
                 mainRequest = low.createRequest();
+                
+                System.out.println(mainRequest);
 
             case "Medium":
                 
                 MediumPriotityConcreteCreator medium =  new MediumPriotityConcreteCreator(priority,status,expireDate);
                 mainRequest = medium.createRequest();
+                System.out.println(mainRequest);
                 
             case "High":
                 
                 HighPriotityConcreteCreator high =  new HighPriotityConcreteCreator(priority,status,expireDate);
                 mainRequest = high.createRequest();
+                System.out.println(mainRequest);
                 
             default:
                 throw new IllegalArgumentException("Invalid priority");

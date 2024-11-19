@@ -9,9 +9,7 @@ package newpackage;
  * @author PC
  */
 class MediumPriorityRequest extends MaintenanceRequest {
-    
-    
-    
+
     public String priority1;
     public String status1;
     public String expireDate1;
@@ -21,24 +19,24 @@ class MediumPriorityRequest extends MaintenanceRequest {
         this.status1 = status;
         this.expireDate1 = expireDate;
     }
+
     @Override
-    public String setPriority() {
-        return priority1; 
+    public void setPriority() {
+        this.priority = priority1;
     }
 
     @Override
-    public String setStatus() {
-        return status1;   
+    public void setStatus() {
+        this.status = status1;
     }
 
     @Override
-    public String setExpire() {
-        return expireDate1;
+    public void setExpire() {
+        this.expireDate = expireDate1;
     }
 
-    @Override
     public String processRequest() {
-        return "Emergency request, our Administer will contact you immediately!";
+        return "Request accept, estimated completion date is" + this.expireDate;
     }
     
     

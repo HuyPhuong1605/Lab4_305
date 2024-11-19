@@ -13,9 +13,9 @@ public abstract class MaintenanceRequest {
     public String status;
     public String expireDate;
 
-    public abstract String setPriority();
-    public abstract String setStatus();
-    public abstract String setExpire();
+    public abstract void setPriority();
+    public abstract void setStatus();
+    public abstract void setExpire();
     public abstract String processRequest();
 
     public void printRequestDetails() {

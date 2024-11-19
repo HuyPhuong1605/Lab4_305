@@ -13,7 +13,7 @@ public class Cilent {
     public static void main(String[] args) {
 
         String encryption = readScanner.nextLine();
-        String extension = readScanner.toString();
+        String extension = readScanner.nextLine();
         
         
 
@@ -23,6 +23,7 @@ public class Cilent {
                 nor.SetEncryption(encryption);
                 nor.SetExtension();
                 Document dc = nor.BuilDocument();
+                System.out.println(dc);
             }
 
             case ".zip" -> {
@@ -30,9 +31,11 @@ public class Cilent {
                 confi.SetEncryption(encryption);
                 confi.SetExtension();
                 Document dc = confi.BuilDocument();
+                System.out.println(dc);
             }
             default -> throw new AssertionError();
         }
+        
 
     }
 }
